@@ -12,18 +12,15 @@ app.get("/", (req, res) => {
 });
 
 app.get("/cards", (req, res) => {
-    // res.locals.prompt = "Who is buried in Grant's tomb?";
     res.render("card", { prompt: "Who is buried in Grant's tomb?" });
 });
 
 app.get("/hello", (req, res) => {
-    // res.locals.prompt = "Who is buried in Grant's tomb?";
     res.render("hello");
 });
 
 app.post("/hello", (req, res) => {
-    console.dir(req.body);
-    res.render("hello");
+    res.render("hello", { name: req.body.username });
 });
 
 app.listen(3000, () => {
