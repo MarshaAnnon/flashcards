@@ -98,6 +98,7 @@ input {
 .namecard-greeting {
   font-size: 1em;
   font-weight: 400;
+  padding-top: 20px;
   width: 50%;
 }
 
